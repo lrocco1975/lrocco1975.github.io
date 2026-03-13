@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Development Economics — Lorenzo Rocco</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+<header>
+  <div class="nav-container">
+    <a href="/" class="nav-logo">Lorenzo Rocco</a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-menu" id="navMenu">
+      <li><a href="/">Home</a></li>
+      <li class="dropdown">
+        <a href="/research/">Research</a>
+        <ul class="dropdown-menu">
+          <li><a href="/research/articles.html">Articles &amp; Publications</a></li>
+          <li><a href="/research/working-papers.html">Working Papers</a></li>
+          <li><a href="/research/data.html">Data</a></li>
+        </ul>
+      </li>
+      <li><a href="/consulting.html">Consulting</a></li>
+      <li class="dropdown">
+        <a href="/teaching/">Teaching</a>
+        <ul class="dropdown-menu">
+          <li><a href="/teaching/development-economics.html">Development Economics</a></li>
+          <li><a href="/teaching/scuola-galileiana.html">Scuola Galileiana</a></li>
+        </ul>
+      </li>
+      <li class="dropdown">
+        <a href="/hobbies/">Hobbies &amp; Fun</a>
+        <ul class="dropdown-menu">
+          <li><a href="/hobbies/books.html">Books</a></li>
+          <li><a href="/hobbies/wildlife.html">Wildlife</a></li>
+          <li><a href="/hobbies/udinese.html">Udinese</a></li>
+          <li><a href="/hobbies/promenades.html">Promenades</a></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</header>
+
+<main>
+  <h1 class="page-title">Development Economics</h1>
+  <p class="page-subtitle">Undergraduate course — University of Padova</p>
+
+  <section>
+    <h2>Lecture Slides</h2>
+    <div class="material-section">
+      <ul class="material-list">
+        <li>Lecture 1 — Introduction</li>
+        <li>Lecture 2 — Poverty</li>
+        <li>Lecture 3 — Extended Family and Kinship</li>
+        <li>Lecture 4 — Fertility</li>
+        <li>Lecture 5 — Child Labor</li>
+        <li>Lecture 6 — HIV-AIDS in Africa</li>
+        <li>Lecture 7 — Conflicts and Institutions</li>
+        <li>Lecture 8 — Growth Theory</li>
+        <li>Lecture 9 — Growth Regressions</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2>Readings by Topic</h2>
+
+    <h3>Poverty</h3>
+    <ul class="material-list">
+      <li>Banerjee &amp; Duflo — "The Economic Lives of the Poor"</li>
+      <li>Deaton — "Instruments, Randomization, and Learning about Development"</li>
+    </ul>
+
+    <h3>Family Structure &amp; Kinship</h3>
+    <ul class="material-list">
+      <li>Platteau — "Institutions, Social Norms and Economic Development" (selected chapters)</li>
+    </ul>
+
+    <h3>Fertility</h3>
+    <ul class="material-list">
+      <li>Becker — "A Treatise on the Family" (selected chapters)</li>
+    </ul>
+
+    <h3>Child Labor</h3>
+    <ul class="material-list">
+      <li>Basu &amp; Van — "The Economics of Child Labor"</li>
+    </ul>
+
+    <h3>HIV-AIDS in Africa</h3>
+    <ul class="material-list">
+      <li>Philipson &amp; Posner — "Private Choices and Public Health"</li>
+    </ul>
+
+    <h3>Conflicts and Institutions</h3>
+    <ul class="material-list">
+      <li>Collier &amp; Hoeffler — "Greed and Grievance in Civil War"</li>
+      <li>Acemoglu, Johnson &amp; Robinson — "The Colonial Origins of Comparative Development"</li>
+    </ul>
+
+    <h3>Growth Theory &amp; Regressions</h3>
+    <ul class="material-list">
+      <li>Mankiw, Romer &amp; Weil — "A Contribution to the Empirics of Economic Growth"</li>
+      <li>Sala-i-Martin — "I Just Ran Two Million Regressions"</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Exercises &amp; Assessments</h2>
+    <ul class="material-list">
+      <li>Problem sets (distributed during the course)</li>
+      <li>Student group presentations — A.Y. 2016/17</li>
+      <li>Past exam examples available upon request</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>External Resources</h2>
+    <ul class="material-list">
+      <li><a href="https://www.irinnews.org" target="_blank" rel="noopener">IRIN News</a> — Humanitarian news and analysis</li>
+      <li><a href="https://reliefweb.int" target="_blank" rel="noopener">ReliefWeb</a> — Humanitarian information service</li>
+    </ul>
+  </section>
+</main>
+
+<footer>
+  <p>Lorenzo Rocco · Dipartimento di Scienze Economiche "Marco Fanno" · University of Padova</p>
+  <p><a href="mailto:lorenzo.rocco@unipd.it">lorenzo.rocco@unipd.it</a></p>
+</footer>
+
+<script>
+  document.getElementById('navToggle').addEventListener('click', function() {
+    document.getElementById('navMenu').classList.toggle('open');
+  });
+  var path = window.location.pathname;
+  document.querySelectorAll('.nav-menu > li').forEach(function(li) {
+    var a = li.querySelector(':scope > a');
+    if (!a) return;
+    var href = a.getAttribute('href');
+    if (href !== '/' && path.startsWith(href.replace(/index\.html$/, '').replace(/\.html$/, '').replace(/\/$/, ''))) {
+      li.classList.add('active');
+    }
+  });
+  document.querySelectorAll('.dropdown > a').forEach(function(a) {
+    a.addEventListener('click', function(e) {
+      if (window.innerWidth <= 720) { e.preventDefault(); this.parentElement.classList.toggle('open'); }
+    });
+  });
+</script>
+</body>
+</html>

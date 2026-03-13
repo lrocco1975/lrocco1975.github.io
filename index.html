@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lorenzo Rocco — Personal Page</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+<header>
+  <div class="nav-container">
+    <a href="/" class="nav-logo">Lorenzo Rocco</a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-menu" id="navMenu">
+      <li><a href="/">Home</a></li>
+      <li class="dropdown">
+        <a href="/research/">Research</a>
+        <ul class="dropdown-menu">
+          <li><a href="/research/articles.html">Articles &amp; Publications</a></li>
+          <li><a href="/research/working-papers.html">Working Papers</a></li>
+          <li><a href="/research/data.html">Data</a></li>
+        </ul>
+      </li>
+      <li><a href="/consulting.html">Consulting</a></li>
+      <li class="dropdown">
+        <a href="/teaching/">Teaching</a>
+        <ul class="dropdown-menu">
+          <li><a href="/teaching/development-economics.html">Development Economics</a></li>
+          <li><a href="/teaching/scuola-galileiana.html">Scuola Galileiana</a></li>
+        </ul>
+      </li>
+      <li class="dropdown">
+        <a href="/hobbies/">Hobbies &amp; Fun</a>
+        <ul class="dropdown-menu">
+          <li><a href="/hobbies/books.html">Books</a></li>
+          <li><a href="/hobbies/wildlife.html">Wildlife</a></li>
+          <li><a href="/hobbies/udinese.html">Udinese</a></li>
+          <li><a href="/hobbies/promenades.html">Promenades</a></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</header>
+
+<main>
+
+  <!-- HERO -->
+  <div class="home-hero">
+    <!-- Replace photo.jpg with your actual photo file in the site root -->
+    <img src="/photo.jpg" alt="Lorenzo Rocco"
+         class="home-photo"
+         onerror="this.style.display='none'; document.getElementById('photo-placeholder').style.display='flex'">
+    <div class="photo-placeholder" id="photo-placeholder" style="display:none">
+      <div class="initials">LR</div>
+      <div>Add photo.jpg<br>to site root</div>
+    </div>
+
+    <div class="home-bio">
+      <h1>Lorenzo Rocco</h1>
+      <p class="bio-position">Professor of Economics</p>
+      <p class="bio-dept">
+        <a href="https://www.economia.unipd.it/en/" target="_blank" rel="noopener">Department of Economics and Management</a>
+        · University of Padova (Italy), since June 2018
+      </p>
+      <p class="bio-roles">
+        Co-Editor, <em>Economics of Education Review</em><br>
+        Co-Editor, <em>Review of Economics of the Household</em>
+      </p>
+
+      <div class="contact-block">
+        <div>Dipartimento di Scienze Economiche "Marco Fanno"</div>
+        <div>via del Santo, 33 · 35123 Padova, Italy</div>
+        <div>✉ <a href="mailto:lorenzo.rocco@unipd.it">lorenzo.rocco@unipd.it</a></div>
+        <div>☎ +39 049 8274260</div>
+        <!-- Replace files/cv.pdf with your actual CV file path -->
+        <a href="/files/cv.pdf" class="btn-cv" target="_blank">⬇ Download CV</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- RECENT PUBLICATIONS -->
+  <section>
+    <h2>Recent Publications</h2>
+    <ul class="recent-pubs">
+      <li>
+        <span class="rp-year">2025</span>
+        "Intended college major choice and the inheritance of majors", with G. Brunello, F. Campo, E. Lodigiani &amp; M. Miotto,
+        <em>Economic Letters</em>, 255:112558
+      </li>
+      <li>
+        <span class="rp-year">2025</span>
+        "Teacher Personality and the Perceived Socioeconomic Gap in Student Outcomes", with G. Brunello, C. Crocè &amp; P. Giustinelli,
+        <em>Economics Letters</em>, 247:112096
+      </li>
+      <li>
+        <span class="rp-year">2025</span>
+        "The Effects of the Vietnam Hunger Eradication Program on Schooling", with M. Bertoni &amp; Q. Huynh,
+        <em>Economics of Education Review</em>, 104:102616
+      </li>
+      <li>
+        <span class="rp-year">2025</span>
+        "Pension reforms, Longer working horizons and absence from work", with M. de Paola,
+        <em>Journal of Population Economics</em>, 38(1):9
+      </li>
+      <li>
+        <span class="rp-year">2024</span>
+        "Business is Tense: New Evidence on How Language Affects Economic Activity", with F. Campo &amp; L. Nunziata,
+        <em>Journal of Economic Growth</em>, 29(1):121–149
+      </li>
+    </ul>
+    <a href="/research/articles.html" class="see-all">See all publications →</a>
+  </section>
+
+  <!-- CURRENT POSITION -->
+  <section>
+    <h2>Current Position</h2>
+    <p>Professor of Economics —
+      <a href="https://www.economia.unipd.it/en/" target="_blank" rel="noopener">Department of Economics and Management</a>,
+      University of Padova (Italy), since June 2018.</p>
+    <p>Co-Editor — <em>Economics of Education Review</em><br>
+       Co-Editor — <em>Review of Economics of the Household</em></p>
+  </section>
+
+  <!-- EDUCATION -->
+  <section>
+    <h2>Education</h2>
+    <ol class="edu-list">
+      <li>Ph.D. in Economics and Econometrics, University of Toulouse I (France) — 2005</li>
+      <li>Ph.D. in Economics, University of Milan (Italy) — 2002</li>
+      <li>Master in Economics and Econometrics, University of Toulouse I (France) — 2001</li>
+      <li>Master in Economics, CORE, Université Catholique de Louvain (Belgium) — 2000</li>
+      <li>Laurea (B.A.) in Economics and Business, University of Udine (Italy) — 1998</li>
+    </ol>
+  </section>
+
+</main>
+
+<footer>
+  <p>Lorenzo Rocco · Dipartimento di Scienze Economiche "Marco Fanno" · University of Padova</p>
+  <p><a href="mailto:lorenzo.rocco@unipd.it">lorenzo.rocco@unipd.it</a>
+     &ensp;·&ensp; <a href="/workshop.html">IV Workshop Social Capital &amp; Health</a>
+     &ensp;·&ensp; <a href="/social-capital-book.html">The Economics of Social Capital and Health</a>
+  </p>
+</footer>
+
+<script>
+  // Mobile nav toggle
+  document.getElementById('navToggle').addEventListener('click', function() {
+    document.getElementById('navMenu').classList.toggle('open');
+  });
+  // Active nav state
+  var path = window.location.pathname;
+  document.querySelectorAll('.nav-menu > li').forEach(function(li) {
+    var a = li.querySelector(':scope > a');
+    if (!a) return;
+    var href = a.getAttribute('href');
+    if (href === '/' && (path === '/' || path === '/index.html')) {
+      li.classList.add('active');
+    } else if (href !== '/' && path.startsWith(href.replace(/index\.html$/, '').replace(/\.html$/, '').replace(/\/$/, ''))) {
+      li.classList.add('active');
+    }
+  });
+  // Dropdown on mobile
+  document.querySelectorAll('.dropdown > a').forEach(function(a) {
+    a.addEventListener('click', function(e) {
+      if (window.innerWidth <= 720) {
+        e.preventDefault();
+        this.parentElement.classList.toggle('open');
+      }
+    });
+  });
+</script>
+</body>
+</html>

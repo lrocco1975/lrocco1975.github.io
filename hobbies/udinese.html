@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Udinese — Lorenzo Rocco</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+<header>
+  <div class="nav-container">
+    <a href="/" class="nav-logo">Lorenzo Rocco</a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-menu" id="navMenu">
+      <li><a href="/">Home</a></li>
+      <li class="dropdown">
+        <a href="/research/">Research</a>
+        <ul class="dropdown-menu">
+          <li><a href="/research/articles.html">Articles &amp; Publications</a></li>
+          <li><a href="/research/working-papers.html">Working Papers</a></li>
+          <li><a href="/research/data.html">Data</a></li>
+        </ul>
+      </li>
+      <li><a href="/consulting.html">Consulting</a></li>
+      <li class="dropdown">
+        <a href="/teaching/">Teaching</a>
+        <ul class="dropdown-menu">
+          <li><a href="/teaching/development-economics.html">Development Economics</a></li>
+          <li><a href="/teaching/scuola-galileiana.html">Scuola Galileiana</a></li>
+        </ul>
+      </li>
+      <li class="dropdown">
+        <a href="/hobbies/">Hobbies &amp; Fun</a>
+        <ul class="dropdown-menu">
+          <li><a href="/hobbies/books.html">Books</a></li>
+          <li><a href="/hobbies/wildlife.html">Wildlife</a></li>
+          <li><a href="/hobbies/udinese.html">Udinese</a></li>
+          <li><a href="/hobbies/promenades.html">Promenades</a></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</header>
+
+<main>
+  <h1 class="page-title">Udinese Calcio</h1>
+
+  <section>
+    <p>
+      Francesco Guidolin is the greatest coach ever to have graced Udine — under him, Udinese reached
+      3rd place in Serie A and qualified for the UEFA Champions League. A remarkable achievement for a
+      club from Friuli.
+    </p>
+    <p>
+      For daily news and opinion from a supporter's perspective, visit
+      <a href="http://www.udineseblog.it" target="_blank" rel="noopener">udineseblog.it</a>.
+    </p>
+  </section>
+</main>
+
+<footer>
+  <p>Lorenzo Rocco · Dipartimento di Scienze Economiche "Marco Fanno" · University of Padova</p>
+  <p><a href="mailto:lorenzo.rocco@unipd.it">lorenzo.rocco@unipd.it</a></p>
+</footer>
+
+<script>
+  document.getElementById('navToggle').addEventListener('click', function() {
+    document.getElementById('navMenu').classList.toggle('open');
+  });
+  var path = window.location.pathname;
+  document.querySelectorAll('.nav-menu > li').forEach(function(li) {
+    var a = li.querySelector(':scope > a');
+    if (!a) return;
+    var href = a.getAttribute('href');
+    if (href !== '/' && path.startsWith(href.replace(/index\.html$/, '').replace(/\.html$/, '').replace(/\/$/, ''))) {
+      li.classList.add('active');
+    }
+  });
+  document.querySelectorAll('.dropdown > a').forEach(function(a) {
+    a.addEventListener('click', function(e) {
+      if (window.innerWidth <= 720) { e.preventDefault(); this.parentElement.classList.toggle('open'); }
+    });
+  });
+</script>
+</body>
+</html>
