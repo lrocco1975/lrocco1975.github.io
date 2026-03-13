@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:lorenzorocco.jimdofree.com)",
+      "WebFetch(domain:github.com)",
+      "mcp__Claude_Preview__preview_start",
+      "WebFetch(domain:lrocco1975.github.io)",
+      "Bash(brew install gh)",
+      "Bash(gh auth login --web --git-protocol https)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" https://lrocco1975.github.io)",
+      "Bash(gh api repos/lrocco1975/lrocco1975.github.io/pages)",
+      "Bash(ls \"/Users/lorenzorocco/Library/CloudStorage/OneDrive-UniversitàdegliStudidiPadova/Documenti/_personal website/\"*.pdf)",
+      "Bash(__NEW_LINE_4cb3059f8a653976__ /opt/anaconda3/bin/python3:*)"
+    ]
+  }
+}
