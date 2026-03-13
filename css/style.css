@@ -313,6 +313,7 @@ h3 {
   padding-top: 0.05rem;
 }
 .pub-text em { font-style: italic; color: #4b5563; }
+.pub-text a em { color: inherit; }
 
 /* === WORKING PAPERS LIST === */
 .wp-list {
