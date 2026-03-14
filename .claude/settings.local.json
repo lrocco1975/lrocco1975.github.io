@@ -10,7 +10,22 @@
       "Bash(curl -s -o /dev/null -w \"%{http_code}\" https://lrocco1975.github.io)",
       "Bash(gh api repos/lrocco1975/lrocco1975.github.io/pages)",
       "Bash(ls \"/Users/lorenzorocco/Library/CloudStorage/OneDrive-UniversitàdegliStudidiPadova/Documenti/_personal website/\"*.pdf)",
-      "Bash(__NEW_LINE_4cb3059f8a653976__ /opt/anaconda3/bin/python3:*)"
+      "Bash(__NEW_LINE_4cb3059f8a653976__ /opt/anaconda3/bin/python3:*)",
+      "Bash(/opt/anaconda3/bin/python3 -:*)",
+      "mcp__PDF_Tools_-_Analyze__Extract__Fill__Compare__read_pdf_content",
+      "Read(//Users/lorenzorocco/Library/CloudStorage/OneDrive-UniversitàdegliStudidiPadova/Documenti/_personal website/**)",
+      "Bash(/opt/anaconda3/bin/python /tmp/add_dois.py)",
+      "WebFetch(domain:apps.who.int)",
+      "WebFetch(domain:iris.who.int)",
+      "WebFetch(domain:www.who.int)",
+      "WebFetch(domain:unesdoc.unesco.org)",
+      "WebFetch(domain:www.yumpu.com)",
+      "Bash(osascript -e ':*)",
+      "Bash(screencapture -R \"104,30,1112,842\" ~/Desktop/lorenzorocco_website.jpg)",
+      "Bash(screencapture ~/Desktop/lorenzorocco_website.png)",
+      "Bash(/opt/anaconda3/bin/python -c \":*)",
+      "Read(//Users/lorenzorocco/Downloads/**)",
+      "Bash(ls -lt ~/Desktop/lorenzorocco*)"
     ]
   }
 }

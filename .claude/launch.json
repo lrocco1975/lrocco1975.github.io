@@ -4,7 +4,7 @@
     {
       "name": "Website",
       "runtimeExecutable": "/bin/bash",
-      "runtimeArgs": ["-c", "cd /Users/lorenzorocco/lrocco1975.github.io && /opt/anaconda3/bin/python -m http.server 3000"],
+      "runtimeArgs": ["-c", "cd '/Users/lorenzorocco/Library/CloudStorage/OneDrive-UniversitàdegliStudidiPadova/Documenti/_personal website' && /opt/anaconda3/bin/python -m http.server 3000"],
       "port": 3000
     }
   ]
