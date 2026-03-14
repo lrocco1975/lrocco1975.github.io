@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Data — Lorenzo Rocco</title>
+  <title>PhD Students — Lorenzo Rocco</title>
   <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
@@ -38,25 +38,33 @@
 </header>
 
 <main>
-  <h1 class="page-title">Data</h1>
-  <p class="page-subtitle">Replication datasets for published papers.</p>
+  <h1 class="page-title">PhD Students</h1>
 
   <section>
-    <h2>Replication Files</h2>
-    <ul class="wp-list">
+    <ul class="pub-list">
       <li>
-        <div class="wp-title">
-          <span class="wp-year">2021</span> —
-          "Mortality, morbidity and economic growth", with E. Fumagalli, A. Mirelman &amp; M. Suhrcke,
-          <em>PLOS ONE</em>, 16(5):e0251424
-        </div>
-        <div class="wp-meta">
-          Data and replication files available on
-          <a href="https://github.com/lrocco1975/Mortality-morbidity-and-economic-growth" target="_blank" rel="noopener">GitHub</a>
-        </div>
+        <span class="pub-year">2025</span>
+        <span class="pub-text"><strong>Francesca Meli</strong> — University of Bristol</span>
+      </li>
+      <li>
+        <span class="pub-year">2024</span>
+        <span class="pub-text"><a href="https://emanuelecaggiano.it/" target="_blank" rel="noopener"><strong>Emanuele Caggiano</strong></a> — Postdoctoral Research Fellow, Università Roma Tre</span>
+      </li>
+      <li>
+        <span class="pub-year">2022</span>
+        <span class="pub-text"><a href="https://www.york.ac.uk/che/people/zecharias-anteneh/" target="_blank" rel="noopener"><strong>Zecharias Fetene Anteneh</strong></a> — Research Fellow, Centre for Health Economics, University of York</span>
+      </li>
+      <li>
+        <span class="pub-year">2020</span>
+        <span class="pub-text"><a href="https://erinhuynh.com/" target="_blank" rel="noopener"><strong>Nhat Quynh Huynh</strong></a> — Lecturer, Leeds University Business School</span>
+      </li>
+      <li>
+        <span class="pub-year">2019</span>
+        <span class="pub-text"><a href="https://en.unibg.it/ugov/person/105767" target="_blank" rel="noopener"><strong>Elona Harka</strong></a> — Assistant Professor, University of Bergamo</span>
       </li>
     </ul>
   </section>
+
 </main>
 
 <footer>
@@ -73,7 +81,9 @@
     var a = li.querySelector(':scope > a');
     if (!a) return;
     var href = a.getAttribute('href');
-    if (href !== '/' && path.startsWith(href.replace(/index\.html$/, '').replace(/\.html$/, '').replace(/\/$/, ''))) {
+    if (href === '/students.html' && path === '/students.html') {
+      li.classList.add('active');
+    } else if (href !== '/' && href !== '/students.html' && path.startsWith(href.replace(/index\.html$/, '').replace(/\.html$/, '').replace(/\/$/, ''))) {
       li.classList.add('active');
     }
   });

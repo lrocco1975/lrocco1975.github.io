@@ -25,7 +25,26 @@
       "Bash(screencapture ~/Desktop/lorenzorocco_website.png)",
       "Bash(/opt/anaconda3/bin/python -c \":*)",
       "Read(//Users/lorenzorocco/Downloads/**)",
-      "Bash(ls -lt ~/Desktop/lorenzorocco*)"
+      "Bash(ls -lt ~/Desktop/lorenzorocco*)",
+      "WebFetch(domain:emanuelecaggiano.it)",
+      "WebFetch(domain:www.linkedin.com)",
+      "WebFetch(domain:www.elonaharka.com)",
+      "WebFetch(domain:erinhuynh.com)",
+      "WebFetch(domain:www.york.ac.uk)",
+      "WebFetch(domain:en.unibg.it)",
+      "WebFetch(domain:www.bristol.ac.uk)",
+      "WebFetch(domain:orcid.org)",
+      "WebFetch(domain:research-information.bris.ac.uk)",
+      "WebFetch(domain:phd-eco.unibg.it)",
+      "WebFetch(domain:pure.york.ac.uk)",
+      "WebFetch(domain:cepr.org)",
+      "WebFetch(domain:ideas.repec.org)",
+      "WebFetch(domain:www.iza.org)",
+      "WebFetch(domain:www.economia.unipd.it)",
+      "WebFetch(domain:www.researchgate.net)",
+      "WebFetch(domain:sites.google.com)",
+      "WebFetch(domain:sc0a614c304248825.jimcontent.com)",
+      "Bash(/opt/anaconda3/bin/python -:*)"
     ]
   }
 }
