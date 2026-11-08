@@ -15,7 +15,7 @@
 <div class="shell">
 <header><div class="brand"><div class="logo" aria-hidden="true">◇</div><div><strong>dieci diamanti</strong><div class="tag">Osserva. Ricorda. Ritrova.</div></div></div><a class="back" href="https://lorenzorocco.me/hobbies/">← Hobbies &amp; Fun</a></header>
 <main><aside><div class="eyebrow">Memoria visiva · Spazio</div><h1>Dieci diamanti.<br>Dove sono?</h1><p class="intro">Memorizza la posizione dei diamanti. Quando sei pronto, premi «Prosegui»: scompariranno e dovrai ritrovarli toccando le celle.</p>
-<ol class="instructions"><li><span class="step">1</span><div><strong>Osserva con calma</strong><p>I 10 diamanti restano visibili finché vuoi.</p></div></li><li><span class="step">2</span><div><strong>Premi Prosegui</strong><p>La griglia si svuota. Ora usa la memoria.</p></div></li><li><span class="step">3</span><div><strong>Ritrovali tutti</strong><p>Tocca le 10 celle giuste, nell’ordine che preferisci.</p></div></li></ol><div class="rule">Un solo tentativo: la prima cella sbagliata termina la partita.</div></aside>
+<ol class="instructions"><li><span class="step">1</span><div><strong>Osserva con calma</strong><p>I 10 diamanti restano visibili finché vuoi. Ogni riga ne contiene da 1 a 3.</p></div></li><li><span class="step">2</span><div><strong>Premi Prosegui</strong><p>La griglia si svuota. Ora usa la memoria.</p></div></li><li><span class="step">3</span><div><strong>Ritrovali tutti</strong><p>Tocca le 10 celle giuste, nell’ordine che preferisci.</p></div></li></ol><div class="rule">Da 1 a 3 diamanti per riga, 10 in totale. La prima cella sbagliata termina la partita.</div></aside>
 <section class="play" aria-label="Area di gioco"><div class="statusbar"><span id="phase" class="phase">1 · Osserva</span><span class="progress"><strong id="count">0</strong> / 10 ritrovati</span></div><div id="board" class="board" aria-label="Griglia di 5 righe e 5 colonne"></div><div id="feedback" class="feedback" role="status" aria-live="polite">Osserva i 10 diamanti. Prenditi il tempo che ti serve.</div><div class="actions"><button type="button" class="primary" id="proceed">Prosegui →</button><button type="button" class="secondary" id="restart">Nuova disposizione</button></div><p class="footnote" id="footnote">Nessun limite di tempo. Il primo errore conclude la partita.</p></section></main>
 <footer><span>Una piccola sfida per la memoria visiva.</span><span>Esercizio ricreativo · Nessun dato inviato</span></footer>
 </div>
@@ -24,9 +24,15 @@
 globalThis.Diamonds=(()=>{
  class Session{
   constructor(){
-   const cells=Array.from({length:25},(_,i)=>i);
-   for(let i=cells.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[cells[i],cells[j]]=[cells[j],cells[i]];}
-   this.diamonds=cells.slice(0,10);this.found=new Set();this.phase='observe';this.wrong=null;
+   let diamonds,rows;
+   // Reject invalid boards to sample uniformly among all layouts with 1–3 per row.
+   do{
+    const cells=Array.from({length:25},(_,i)=>i);
+    for(let i=cells.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[cells[i],cells[j]]=[cells[j],cells[i]];}
+    diamonds=cells.slice(0,10);rows=Array(5).fill(0);
+    for(const cell of diamonds)rows[Math.floor(cell/5)]++;
+   }while(rows.some(count=>count<1||count>3));
+   this.diamonds=diamonds;this.found=new Set();this.phase='observe';this.wrong=null;
   }
   proceed(){if(this.phase==='observe')this.phase='recall';}
   choose(cell){
