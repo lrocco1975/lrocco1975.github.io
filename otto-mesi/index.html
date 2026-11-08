@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#f5f4ef"><meta name="apple-mobile-web-app-title" content="Otto mesi">
+<title>Otto mesi — memoria e sequenza</title>
+<style>
+:root{font-family:Inter,ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:#293d37;background:#f5f4ef;font-synthesis:none}*{box-sizing:border-box}body{margin:0}button{font:inherit;touch-action:manipulation;cursor:pointer}button:disabled{cursor:default}button:focus-visible,a:focus-visible{outline:3px solid #b18038;outline-offset:4px}a{color:inherit}.shell{max-width:1200px;padding:28px 32px 22px;margin:auto}header{display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #dcdfd6;padding-bottom:20px;gap:20px}.brand{display:flex;gap:12px;align-items:center}.logo{width:42px;height:42px;display:grid;place-items:center;border-radius:12px;background:#315c4b;color:#f3dfaa;font-size:25px}.brand strong{font-size:20px;letter-spacing:-.5px}.tag{font-size:10px;letter-spacing:1.8px;text-transform:uppercase;color:#7b8779;margin-top:4px}.back{font-size:12px;text-decoration:none;color:#6b7c6c}.back:hover{text-decoration:underline}main{display:grid;grid-template-columns:270px minmax(0,1fr);gap:55px;padding-top:42px}.eyebrow{font-size:11px;font-weight:650;letter-spacing:1.8px;text-transform:uppercase;color:#788572}h1{font-family:Georgia,serif;font-weight:400;letter-spacing:-1.5px;font-size:43px;line-height:1.1;margin:13px 0 18px}.intro{font-size:14px;line-height:1.8;color:#687969;margin:0 0 25px}.instructions{list-style:none;margin:0;padding:0;display:grid;gap:19px}.instructions li{display:flex;gap:12px;align-items:flex-start}.step{flex:0 0 26px;height:26px;border:1px solid #d5dbce;border-radius:50%;display:grid;place-items:center;font-size:11px;color:#6c7e67}.instructions strong{display:block;font-size:13px;margin:3px 0 4px;font-weight:600}.instructions p{font-size:12px;color:#7a8575;line-height:1.6;margin:0}.rule{font-size:12px;line-height:1.7;background:#eaece2;padding:16px;border-radius:12px;margin-top:26px;color:#52674f}.play{width:100%;max-width:700px;justify-self:center;min-width:0}.statusbar{display:flex;justify-content:space-between;align-items:center;gap:20px;margin-bottom:20px}.phase{border:1px solid #d7decf;border-radius:99px;font-size:12px;padding:8px 13px;color:#55724e;background:#eef0e7}.progress{font-size:13px;color:#70816d}.progress strong{font-size:21px;font-weight:500;color:#2e4e3c;font-variant-numeric:tabular-nums;margin-right:4px}.board{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:14px;padding:14px;background:#e5e8df;border:1px solid #dbe1d2;border-radius:18px}.tile{grid-column:span 2;min-width:0;aspect-ratio:1.65;border:3px solid transparent;border-radius:12px;display:grid;place-items:center;padding:8px;background:#38483f;color:#f0f3e8;font-size:clamp(14px,1.8vw,21px);font-weight:600;position:relative;-webkit-tap-highlight-color:transparent;user-select:none}.tile:nth-child(7){grid-column:2/span 2}.tile:nth-child(8){grid-column:4/span 2}.tile:not(:disabled):hover{border-color:#80907e}.tile.found{border-color:#39845b}.tile.wrong{border-color:#ba4037;box-shadow:0 0 0 2px #ba4037}.mark{position:absolute;right:7px;top:4px;font-size:16px}.concealed{font-size:27px;font-weight:400;line-height:1;color:#a4b2a0}.feedback{text-align:center;min-height:62px;font-size:14px;line-height:1.6;color:#64785e;padding:19px 4px 10px}.feedback.lost{color:#9a4b3f}.feedback.won{color:#39724c}.actions{display:flex;gap:10px}.primary,.secondary{border-radius:11px;padding:14px 20px;font-size:14px;font-weight:600;min-height:48px}.primary{background:#315c4b;color:white;border:0;flex:1}.primary:hover{background:#254b3c}.secondary{background:transparent;color:#56704f;border:1px solid #d4dccd;flex:1}.secondary:hover{background:#e9ede2}button[hidden]{display:none}.footnote{font-size:11px;color:#819077;text-align:center;margin:13px 0 0;line-height:1.5}footer{display:flex;justify-content:space-between;gap:20px;border-top:1px solid #dcded4;margin-top:45px;padding-top:15px;font-size:10px;line-height:1.6;color:#87917e}
+@media(max-width:800px){.shell{padding:20px 16px}header{padding-bottom:16px}.brand strong{font-size:18px}.tag{font-size:9px}.back{font-size:11px}main{grid-template-columns:1fr;gap:24px;padding-top:25px}h1{font-size:34px;margin:9px 0 11px}.intro{margin-bottom:0;font-size:13px;max-width:550px}.instructions,.rule{display:none}.statusbar{margin-bottom:14px}.board{gap:8px;padding:8px;border-radius:14px}.tile{border-radius:8px;aspect-ratio:1.35;font-size:clamp(12px,3.2vw,20px);padding:3px}.feedback{font-size:13px}.mark{font-size:13px;right:4px;top:1px}.primary,.secondary{font-size:13px;padding:13px 10px}footer{margin-top:28px}}
+</style>
+</head>
+<body>
+<div class="shell"><header><div class="brand"><div class="logo" aria-hidden="true">▦</div><div><strong>otto mesi</strong><div class="tag">Otto posizioni, una sequenza</div></div></div><a class="back" href="https://lorenzorocco.me/hobbies/">← Hobbies &amp; Fun</a></header>
+<main><aside><div class="eyebrow">Memoria visiva · Sequenza</div><h1>Da gennaio<br>ad agosto.</h1><p class="intro">Memorizza dove si trova ogni mese. Quando sei pronto, premi «Prosegui»: i rettangoli si oscurano. Tocca le posizioni nell’ordine dei mesi.</p><ol class="instructions"><li><span class="step">1</span><div><strong>Osserva la disposizione</strong><p>Otto mesi e otto colori, distribuiti su tre righe.</p></div></li><li><span class="step">2</span><div><strong>Premi Prosegui</strong><p>Nomi e colori scompaiono. Le posizioni rimangono le stesse.</p></div></li><li><span class="step">3</span><div><strong>Segui il calendario</strong><p>Gennaio, febbraio, marzo… fino ad agosto.</p></div></li></ol><div class="rule">Il primo errore termina la partita. Ritrova tutti e otto i mesi nell’ordine giusto per vincere.</div></aside>
+<section class="play" aria-label="Area di gioco"><div class="statusbar"><span id="phase" class="phase">1 · Osserva</span><span class="progress"><strong id="count">0</strong> / 8 mesi</span></div><div id="board" class="board" aria-label="Otto rettangoli su tre righe: tre, tre e due"></div><div id="feedback" class="feedback" role="status" aria-live="polite">Osserva dove si trova ogni mese. Prenditi il tempo che ti serve.</div><div class="actions"><button type="button" class="primary" id="proceed">Prosegui →</button><button type="button" class="secondary" id="restart">Nuova disposizione</button></div><p class="footnote" id="footnote">Nessun limite di tempo. Il primo errore conclude la partita.</p></section></main>
+<footer><span>Ricorda le posizioni. Ritrova la sequenza.</span><span>Esercizio ricreativo · Nessun dato inviato</span></footer></div>
+<script>
+'use strict';
+globalThis.Months=(()=>{
+ const names=['Gennaio','Febbraio','Marzo','Aprile','Maggio','Giugno','Luglio','Agosto'];
+ function shuffle(){const values=Array.from({length:8},(_,i)=>i);for(let i=7;i>0;i--){const j=Math.floor(Math.random()*(i+1));[values[i],values[j]]=[values[j],values[i]];}return values;}
+ class Session{
+  constructor(){this.order=shuffle();this.colors=shuffle();this.next=0;this.phase='observe';this.wrong=null;}
+  proceed(){if(this.phase==='observe')this.phase='recall';}
+  choose(index){
+   if(this.phase!=='recall'||!Number.isInteger(index)||index<0||index>=8||this.order[index]<this.next)return 'ignored';
+   if(this.order[index]!==this.next){this.wrong=index;this.phase='lost';return 'lost';}
+   this.next++;if(this.next===8){this.phase='won';return 'won';}return 'correct';
+  }
+ }
+ return {Session,names};
+})();
+
+</script>
+<script>
+'use strict';
+(()=>{
+ const $=id=>document.getElementById(id),board=$('board'),cells=[];
+ const colors=['#eab9a6','#c2d4eb','#d8c4e8','#bcd9ba','#f1db9f','#a8d5d2','#edc0cf','#ced4a4'];
+ let game;
+ for(let i=0;i<8;i++){
+  const button=document.createElement('button');button.type='button';button.className='tile';
+  button.addEventListener('click',()=>{if(game.choose(i)!=='ignored')render();});board.append(button);cells.push(button);
+ }
+ function render(){
+  const observing=game.phase==='observe',finished=game.phase==='lost'||game.phase==='won';
+  cells.forEach((button,i)=>{
+   const month=game.order[i],found=month<game.next,wrong=game.wrong===i,visible=observing||found||finished;
+   button.className='tile'+(found?' found':wrong?' wrong':'');
+   button.style.backgroundColor=visible?colors[game.colors[i]]:'';button.style.color=visible?'#293d37':'';
+   button.textContent=visible?Months.names[month]:'';
+   if(!visible){const dot=document.createElement('span');dot.className='concealed';dot.setAttribute('aria-hidden','true');dot.textContent='·';button.append(dot);}
+   if(found||wrong){const mark=document.createElement('span');mark.className='mark';mark.setAttribute('aria-hidden','true');mark.textContent=wrong?'×':'✓';button.append(mark);}
+   button.disabled=observing||finished||found;
+   button.setAttribute('aria-label',`Rettangolo ${i+1}`+(visible?`, ${Months.names[month]}`:'')+(found?', ritrovato':wrong?', errore':''));
+   button.setAttribute('aria-pressed',String(found));
+  });
+  $('count').textContent=game.next;$('proceed').hidden=!observing;
+  $('restart').textContent=observing?'Nuova disposizione':finished?'Gioca ancora ↻':'Ricomincia';$('restart').className=finished?'primary':'secondary';
+  $('feedback').className='feedback '+(finished?game.phase:'');
+  if(observing){$('phase').textContent='1 · Osserva';$('feedback').textContent='Osserva dove si trova ogni mese. Prenditi il tempo che ti serve.';}
+  if(game.phase==='recall'){$('phase').textContent='2 · Ricorda';$('feedback').textContent=`Tocca ${Months.names[game.next]}.`;}
+  if(game.phase==='lost'){$('phase').textContent='Partita terminata';$('feedback').textContent=`Cercavi ${Months.names[game.next]}. Hai ritrovato ${game.next} mesi su 8 nell’ordine giusto.`;}
+  if(game.phase==='won'){$('phase').textContent='Sequenza completata!';$('feedback').textContent='Perfetto: da gennaio ad agosto, senza errori!';}
+  $('footnote').textContent=game.phase==='lost'?'Il bordo rosso indica l’errore. Ora puoi rivedere la disposizione.':'Nessun limite di tempo. Il primo errore conclude la partita.';
+ }
+ function restart(){game=new Months.Session();render();}
+ $('proceed').addEventListener('click',()=>{game.proceed();render();cells[0].focus({preventScroll:true});});
+ $('restart').addEventListener('click',restart);restart();
+})();
+
+</script>
+</body></html>
