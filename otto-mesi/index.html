@@ -34,8 +34,103 @@ globalThis.Months=(()=>{
 </script>
 <script>
 'use strict';
+globalThis.I18n=(()=>{
+ const en={
+  'passo mentale':'mental steps','Passo mentale':'Mental Steps','dieci diamanti':'ten diamonds','Dieci diamanti':'Ten Diamonds','otto mesi':'eight months','Otto mesi':'Eight Months',
+  'Dieci diamanti — memoria visiva':'Ten Diamonds — visual memory','Otto mesi — memoria e sequenza':'Eight Months — memory and sequence',
+  'Un percorso, tutto nella mente':'A journey in your mind','Disponibile offline':'Available offline','Memoria · Attenzione · Spazio':'Memory · Attention · Space',
+  'Segui le frecce.':'Follow the arrows.','Trova l’arrivo.':'Find the finish.',
+  'Parti dalla bandierina, percorri ogni freccia con la mente e tocca solo la casella finale.':'Start at the flag, follow each arrow in your mind and tap only the final square.',
+  'Tipo di frecce':'Arrow type','Semplici · 1 passo':'Simple · 1 step','A gomito · fino a 2 passi':'Elbows · up to 2 steps','Composte · fino a 3 passi':'Compound · up to 3 steps',
+  'Frecce per percorso':'Arrows per route','8 frecce per ogni percorso':'8 arrows per route','8 frecce':'8 arrows','Inizia a giocare':'Start playing','Inizia a giocare →':'Start playing →',
+  'Il timer parte con la prima sequenza. Nessuna fretta: prima la precisione.':'The timer starts with the first route. Take your time: accuracy comes first.',
+  'Come si leggono le frecce?':'How do I read the arrows?',
+  'Leggi le otto frecce da sinistra a destra, sulla stessa riga. Ogni tratto vale una casella. Il puntino indica l’inizio del simbolo, la punta la fine.':'Read the eight arrows from left to right. Each segment moves one square. The dot marks the start of a symbol and the arrowhead marks its end.',
+  'Le direzioni restano quelle dello schermo: alto, basso, destra e sinistra. Ogni simbolo riparte dalla posizione raggiunta dal precedente.':'Directions always follow the screen: up, down, right and left. Each symbol starts where the previous one ended.',
+  'Se sbagli, riparti mentalmente dalla bandierina: il percorso rimane identico. Quando indovini, appare una nuova sequenza.':'If you make a mistake, start again mentally from the flag: the route stays the same. A correct answer brings a new route.',
+  'Area di gioco':'Game area','Tempo':'Time','Risolti':'Solved','Errori':'Errors','Pausa':'Pause','Riprendi':'Resume',
+  'Griglia di 8 righe e 8 colonne':'Grid with 8 rows and 8 columns','Pronto a partire?':'Ready to start?',
+  'Scegli la difficoltà e premi «Inizia a giocare».':'Choose a difficulty and press “Start playing”.','Il tuo percorso':'Your route','Le frecce restano visibili':'The arrows stay visible','Il primo percorso ti aspetta.':'Your first route is waiting.',
+  'Tutti i movimenti restano dentro la griglia.':'Every move stays inside the grid.','Un passo alla volta. Anche quando il percorso si complica.':'One step at a time, even when the route gets tricky.',
+  'Esercizio ricreativo · Nessun dato inviato':'Recreational exercise · No data sent',
+  'su':'up','destra':'right','giù':'down','sinistra':'left','passo':'step','passi':'steps',
+  'Riga {row}, colonna {column}':'Row {row}, column {column}',', partenza':', start',
+  '{count} passi in totale':'{count} steps in total','Parti dalla bandierina e tocca la casella d’arrivo.':'Start at the flag and tap the final square.',
+  'Ricomincia da zero ↻':'Start over ↻','Le impostazioni si applicano quando ricominci. Il timer esclude le pause.':'Settings apply when you start over. The timer excludes pauses.',
+  'Esatto! Ecco un nuovo percorso.':'Correct! Here is a new route.','Riprova: riparti dalla bandierina con le stesse frecce.':'Try again: start from the flag with the same arrows.',
+  'Stesso percorso: riparti dalla bandierina e riprova.':'Same route: start from the flag and try again.','Una piccola pausa.':'Take a short break.',
+  'Il tempo è fermo. Premi «Riprendi» quando vuoi continuare.':'The timer is stopped. Press “Resume” when you are ready.',
+  'Osserva. Ricorda. Ritrova.':'Look. Remember. Find.','← Hobbies & Fun':'← Hobbies & Fun','Memoria visiva · Spazio':'Visual memory · Space',
+  'Dieci diamanti.':'Ten diamonds.','Dove sono?':'Where are they?',
+  'Memorizza la posizione dei diamanti. Quando sei pronto, premi «Prosegui»: scompariranno e dovrai ritrovarli toccando le celle.':'Memorize the diamond positions. When you are ready, press “Continue”: they will disappear and you must find them by tapping the squares.',
+  'Osserva con calma':'Take a good look','I 10 diamanti restano visibili finché vuoi. Ogni riga ne contiene da 1 a 3.':'The 10 diamonds stay visible as long as you need. Each row contains 1 to 3.',
+  'Premi Prosegui':'Press Continue','La griglia si svuota. Ora usa la memoria.':'The grid clears. Now use your memory.','Ritrovali tutti':'Find them all',
+  'Tocca le 10 celle giuste, nell’ordine che preferisci.':'Tap the 10 correct squares in any order.',
+  'Da 1 a 3 diamanti per riga, 10 in totale. La prima cella sbagliata termina la partita.':'1 to 3 diamonds per row, 10 in total. The first wrong square ends the game.',
+  '1 · Osserva':'1 · Observe','2 · Ricorda':'2 · Recall','/ 10 ritrovati':'/ 10 found','/ 8 mesi':'/ 8 months',
+  'Griglia di 5 righe e 5 colonne':'Grid with 5 rows and 5 columns','Osserva i 10 diamanti. Prenditi il tempo che ti serve.':'Look at the 10 diamonds. Take all the time you need.',
+  'Prosegui →':'Continue →','Nuova disposizione':'New layout','Nessun limite di tempo. Il primo errore conclude la partita.':'No time limit. The first mistake ends the game.',
+  'Una piccola sfida per la memoria visiva.':'A little challenge for your visual memory.',', diamante ritrovato':', diamond found',', errore':', wrong',', diamante':', diamond',
+  'Gioca ancora ↻':'Play again ↻','Ricomincia':'Start over','Bene! Continua: il primo errore conclude la partita.':'Good! Keep going: the first mistake ends the game.',
+  'Dove sono i diamanti? Tocca soltanto le celle che ricordi.':'Where are the diamonds? Tap only the squares you remember.','Partita terminata':'Game over',
+  'Questa cella era vuota. Hai ritrovato {count} diamanti su 10.':'This square was empty. You found {count} out of 10 diamonds.',
+  'Tutti ritrovati!':'All found!','Perfetto: hai ritrovato tutti e 10 i diamanti senza errori!':'Perfect: you found all 10 diamonds without a mistake!',
+  'In verde i diamanti ritrovati, in oro quelli che mancavano.':'Green marks the diamonds you found; gold shows the ones you missed.',
+  'Otto posizioni, una sequenza':'Eight positions, one sequence','Memoria visiva · Sequenza':'Visual memory · Sequence','Da gennaio':'From January','ad agosto.':'to August.',
+  'Memorizza dove si trova ogni mese. Quando sei pronto, premi «Prosegui»: i rettangoli si oscurano. Tocca le posizioni nell’ordine dei mesi.':'Memorize where each month is. When you are ready, press “Continue”: the rectangles will darken. Tap their positions in month order.',
+  'Osserva la disposizione':'Study the layout','Otto mesi e otto colori, distribuiti su tre righe.':'Eight months and eight colours, arranged in three rows.',
+  'Nomi e colori scompaiono. Le posizioni rimangono le stesse.':'Names and colours disappear. The positions stay the same.',
+  'Segui il calendario':'Follow the calendar','Gennaio, febbraio, marzo… fino ad agosto.':'January, February, March… all the way to August.',
+  'Il primo errore termina la partita. Ritrova tutti e otto i mesi nell’ordine giusto per vincere.':'The first mistake ends the game. Find all eight months in the right order to win.',
+  'Otto rettangoli su tre righe: tre, tre e due':'Eight rectangles in three rows: three, three and two',
+  'Osserva dove si trova ogni mese. Prenditi il tempo che ti serve.':'Study where each month is. Take all the time you need.',
+  'Ricorda le posizioni. Ritrova la sequenza.':'Remember the positions. Find the sequence.',
+  'Gennaio':'January','Febbraio':'February','Marzo':'March','Aprile':'April','Maggio':'May','Giugno':'June','Luglio':'July','Agosto':'August',
+  'Rettangolo {number}':'Rectangle {number}',', ritrovato':', found','Tocca {month}.':'Tap {month}.',
+  'Cercavi {month}. Hai ritrovato {count} mesi su 8 nell’ordine giusto.':'You were looking for {month}. You found {count} out of 8 months in the right order.',
+  'Sequenza completata!':'Sequence complete!','Perfetto: da gennaio ad agosto, senza errori!':'Perfect: January to August, without a mistake!',
+  'Il bordo rosso indica l’errore. Ora puoi rivedere la disposizione.':'The red border marks the mistake. You can now review the layout.'
+ };
+ const storageKey='mind-games-language';let language='it';const listeners=new Set();
+ try{const saved=localStorage.getItem(storageKey);if(saved==='en'||saved==='it')language=saved;}catch{}
+ function t(key,values={}){const text=language==='en'&&Object.hasOwn(en,key)?en[key]:key;return text.replace(/\{(\w+)\}/g,(match,name)=>Object.hasOwn(values,name)?String(values[name]):match);}
+ let textNodes=[],attributes=[],selector=null;
+ function apply(){
+  if(typeof document==='undefined')return;
+  document.documentElement.lang=language;
+  for(const [node,original] of textNodes)if(node.isConnected){const key=original.trim();node.nodeValue=original.replace(key,t(key));}
+  for(const [node,name,original] of attributes)if(node.isConnected)node.setAttribute(name,t(original));
+  if(selector)selector.value=language;
+ }
+ function setLanguage(value,persist=true){
+  if((value!=='it'&&value!=='en')||value===language)return;
+  language=value;if(persist)try{localStorage.setItem(storageKey,value);}catch{}
+  apply();for(const listener of listeners)listener();
+ }
+ const api={t,setLanguage,has:key=>Object.hasOwn(en,key),subscribe:callback=>{listeners.add(callback);return ()=>listeners.delete(callback);},get language(){return language;}};
+ if(typeof document!=='undefined'){
+  const walker=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT,{acceptNode:node=>node.nodeValue.trim()&&!node.parentElement.closest('script,style')?NodeFilter.FILTER_ACCEPT:NodeFilter.FILTER_REJECT});
+  while(walker.nextNode())textNodes.push([walker.currentNode,walker.currentNode.nodeValue]);
+  const title=document.querySelector('title');if(title)textNodes.push([title.firstChild,title.textContent]);
+  for(const node of document.querySelectorAll('[aria-label]'))attributes.push([node,'aria-label',node.getAttribute('aria-label')]);
+  const meta=document.querySelector('meta[name="apple-mobile-web-app-title"]');if(meta)attributes.push([meta,'content',meta.content]);
+  const header=document.querySelector('header'),tools=document.createElement('div');tools.className='header-tools';
+  const control=document.createElement('label');control.className='language-control';
+  selector=document.createElement('select');selector.id='language';selector.setAttribute('aria-label','Lingua / Language');
+  for(const [value,label] of [['it','Italiano'],['en','English']]){const option=document.createElement('option');option.value=value;option.textContent=label;selector.append(option);}
+  selector.addEventListener('change',()=>setLanguage(selector.value));control.append(selector);tools.append(control);
+  for(const node of [...header.children].slice(1))tools.append(node);header.append(tools);
+  const style=document.createElement('style');style.textContent='.header-tools{display:flex;align-items:center;justify-content:flex-end;gap:14px;min-width:0}.language-control select{font:inherit;font-size:13px;color:#315c4b;background:#fffef9;border:1px solid #c5d9cc;border-radius:9px;padding:8px 11px;min-height:36px;max-width:125px}.language-control select:focus-visible{outline:3px solid #c48639;outline-offset:3px}@media(max-width:600px){.header-tools{flex-direction:column;align-items:flex-end;gap:6px}.header-tools .offline{display:none}.language-control select{font-size:12px;padding:6px 8px}.header-tools .back{font-size:10px}}';document.head.append(style);
+  apply();
+  window.addEventListener('storage',event=>{if(event.key===storageKey)setLanguage(event.newValue,false);});
+ }
+ return api;
+})();
+
+'use strict';
 (()=>{
  const $=id=>document.getElementById(id),board=$('board'),cells=[];
+ const t=(key,values)=>I18n.t(key,values),monthName=index=>t(Months.names[index]);
  const colors=['#eab9a6','#c2d4eb','#d8c4e8','#bcd9ba','#f1db9f','#a8d5d2','#edc0cf','#ced4a4'];
  let game;
  for(let i=0;i<8;i++){
@@ -48,25 +143,25 @@ globalThis.Months=(()=>{
    const month=game.order[i],found=month<game.next,wrong=game.wrong===i,visible=observing||found||finished;
    button.className='tile'+(found?' found':wrong?' wrong':'');
    button.style.backgroundColor=visible?colors[game.colors[i]]:'';button.style.color=visible?'#293d37':'';
-   button.textContent=visible?Months.names[month]:'';
+   button.textContent=visible?monthName(month):'';
    if(!visible){const dot=document.createElement('span');dot.className='concealed';dot.setAttribute('aria-hidden','true');dot.textContent='·';button.append(dot);}
    if(found||wrong){const mark=document.createElement('span');mark.className='mark';mark.setAttribute('aria-hidden','true');mark.textContent=wrong?'×':'✓';button.append(mark);}
    button.disabled=observing||finished||found;
-   button.setAttribute('aria-label',`Rettangolo ${i+1}`+(visible?`, ${Months.names[month]}`:'')+(found?', ritrovato':wrong?', errore':''));
+   button.setAttribute('aria-label',t('Rettangolo {number}',{number:i+1})+(visible?`, ${monthName(month)}`:'')+t(found?', ritrovato':wrong?', errore':''));
    button.setAttribute('aria-pressed',String(found));
   });
   $('count').textContent=game.next;$('proceed').hidden=!observing;
-  $('restart').textContent=observing?'Nuova disposizione':finished?'Gioca ancora ↻':'Ricomincia';$('restart').className=finished?'primary':'secondary';
+  $('restart').textContent=t(observing?'Nuova disposizione':finished?'Gioca ancora ↻':'Ricomincia');$('restart').className=finished?'primary':'secondary';
   $('feedback').className='feedback '+(finished?game.phase:'');
-  if(observing){$('phase').textContent='1 · Osserva';$('feedback').textContent='Osserva dove si trova ogni mese. Prenditi il tempo che ti serve.';}
-  if(game.phase==='recall'){$('phase').textContent='2 · Ricorda';$('feedback').textContent=`Tocca ${Months.names[game.next]}.`;}
-  if(game.phase==='lost'){$('phase').textContent='Partita terminata';$('feedback').textContent=`Cercavi ${Months.names[game.next]}. Hai ritrovato ${game.next} mesi su 8 nell’ordine giusto.`;}
-  if(game.phase==='won'){$('phase').textContent='Sequenza completata!';$('feedback').textContent='Perfetto: da gennaio ad agosto, senza errori!';}
-  $('footnote').textContent=game.phase==='lost'?'Il bordo rosso indica l’errore. Ora puoi rivedere la disposizione.':'Nessun limite di tempo. Il primo errore conclude la partita.';
+  if(observing){$('phase').textContent=t('1 · Osserva');$('feedback').textContent=t('Osserva dove si trova ogni mese. Prenditi il tempo che ti serve.');}
+  if(game.phase==='recall'){$('phase').textContent=t('2 · Ricorda');$('feedback').textContent=t('Tocca {month}.',{month:monthName(game.next)});}
+  if(game.phase==='lost'){$('phase').textContent=t('Partita terminata');$('feedback').textContent=t('Cercavi {month}. Hai ritrovato {count} mesi su 8 nell’ordine giusto.',{month:monthName(game.next),count:game.next});}
+  if(game.phase==='won'){$('phase').textContent=t('Sequenza completata!');$('feedback').textContent=t('Perfetto: da gennaio ad agosto, senza errori!');}
+  $('footnote').textContent=t(game.phase==='lost'?'Il bordo rosso indica l’errore. Ora puoi rivedere la disposizione.':'Nessun limite di tempo. Il primo errore conclude la partita.');
  }
  function restart(){game=new Months.Session();render();}
  $('proceed').addEventListener('click',()=>{game.proceed();render();cells[0].focus({preventScroll:true});});
- $('restart').addEventListener('click',restart);restart();
+ $('restart').addEventListener('click',restart);I18n.subscribe(render);restart();
 })();
 
 </script>
