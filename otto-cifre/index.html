@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="it"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#e5ddf5"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Otto cifre"><title>Otto cifre — memoria e numeri</title>
+<style>
+:root{font-family:Inter,ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:#293d37;background:#fff9f2;font-synthesis:none}*{box-sizing:border-box}body{margin:0}button{font:inherit;touch-action:manipulation;cursor:pointer}button:disabled{cursor:default;opacity:.5}button:focus-visible,a:focus-visible{outline:3px solid #ad8233;outline-offset:4px}[hidden]{display:none!important}.shell{max-width:1120px;padding:26px 30px 18px;margin:auto}header{display:flex;justify-content:space-between;align-items:center;gap:14px;border-bottom:1px solid #dcdfd6;padding-bottom:20px}.brand{display:flex;gap:12px;align-items:center}.logo{width:42px;height:42px;display:grid;place-items:center;border-radius:12px;background:#d4c5ec;color:#49365f;font:27px Georgia,serif}.brand strong{font-size:20px;letter-spacing:-.5px}.tag{font-size:10px;letter-spacing:1.6px;text-transform:uppercase;color:#748172;margin-top:4px}.back{font-size:12px;text-decoration:none;color:#6b7c6c;white-space:nowrap}.back:hover{text-decoration:underline}main{display:grid;grid-template-columns:280px minmax(0,1fr);gap:64px;padding-top:35px}.eyebrow{font-size:11px;letter-spacing:1.7px;font-weight:650;color:#76836e;text-transform:uppercase}h1{font:400 43px/1.1 Georgia,serif;letter-spacing:-1.4px;margin:12px 0 18px}.intro{font-size:14px;line-height:1.8;color:#687969;margin:0 0 24px}.rules{padding:0;list-style:none;display:grid;gap:18px}.rules li{font-size:13px;line-height:1.6;color:#657461}.rules strong{display:block;font-weight:600;color:#344e41}.note{background:#f0e7f7;border-radius:12px;padding:15px;font-size:12px;line-height:1.7;color:#65566d}.play{max-width:620px;width:100%;justify-self:center;min-width:0}.statusbar{display:flex;justify-content:space-between;align-items:center;margin-bottom:15px;gap:10px}.phase{font-size:12px;border-radius:99px;padding:8px 13px;background:#ede5f6;border:1px solid #d9cbea;color:#655078}.time{font-size:13px;color:#687763;font-variant-numeric:tabular-nums}.observe-panel{background:#e8def5;border:1px solid #d5c5e8;border-radius:22px;padding:35px 18px;text-align:center;min-height:250px;display:flex;flex-direction:column;align-items:center;justify-content:center}.label{font-size:12px;color:#6e5e7b;margin:0 0 20px}.number{font-size:clamp(34px,6vw,68px);font-weight:650;line-height:1.25;letter-spacing:.055em;color:#000;font-variant-numeric:tabular-nums;white-space:nowrap;margin:0;max-width:100%}.observe-help{font-size:12px;line-height:1.7;color:#6c6075;margin:23px 0 0}.primary{background:#28796b;color:#fff;border:0;border-radius:11px;padding:14px 18px;font-size:14px;font-weight:600;min-height:48px;width:100%}.primary:hover{background:#226657}#proceed{margin-top:16px}.question-panel{border-radius:18px;background:#e0eee8;border:1px solid #c9dfd3;padding:18px 22px;margin-bottom:14px;min-height:114px}.question-step{font-size:11px;letter-spacing:1.2px;text-transform:uppercase;color:#6a7f72;margin:0 0 8px}.question-panel h2{font:400 25px/1.2 Georgia,serif;letter-spacing:-.4px;margin:0 0 7px}.question-help{font-size:12px;line-height:1.6;color:#64786a;margin:0}.answer-box{border:1px solid #d9d9cc;border-radius:13px;background:#fffef9;padding:14px;text-align:center;margin-bottom:12px;min-height:64px;display:flex;align-items:center;justify-content:center}.answer-value{font-size:29px;letter-spacing:.15em;color:#000;font-variant-numeric:tabular-nums;overflow-wrap:anywhere}.answer-empty{font-size:13px;color:#89907e;letter-spacing:0}.keypad{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}.key{min-height:55px;background:#e2ebf8;border:1px solid #cbd9eb;border-radius:12px;font-size:24px;color:#263f54}.key:nth-child(3n+2){background:#f7e4ce;border-color:#ead3b8}.key:hover{filter:brightness(.97)}.key.utility{background:#eee8f4;border-color:#d9cee5;font-size:12px;color:#665373}.answer-actions{display:grid;gap:8px;margin-top:12px}.none{border:1px solid #d3dbcf;background:#f3f4ea;color:#49644e;border-radius:10px;padding:10px;min-height:42px;font-size:12px}.bottom{display:flex;justify-content:space-between;align-items:center;gap:14px;margin-top:15px}.restart{background:transparent;border:0;color:#657860;font-size:12px;text-decoration:underline;padding:8px}.hint{font-size:11px;line-height:1.6;color:#7d8775;margin:0}.review{background:#edf2e7;border:1px solid #d6dfca;padding:20px;border-radius:18px}.review h2{font:26px Georgia,serif;margin:0 0 15px}.review ol{padding-left:20px;display:grid;gap:16px}.review li{font-size:13px;line-height:1.7}.review .digits{color:#000;font-variant-numeric:tabular-nums;letter-spacing:2px}.review-actions{display:grid;gap:10px;margin-top:20px}footer{display:flex;justify-content:space-between;gap:18px;border-top:1px solid #dcded4;margin-top:30px;padding-top:14px;font-size:10px;line-height:1.6;color:#87917e}
+@media(max-width:800px){.shell{padding:16px 18px}header{padding-bottom:14px}.brand strong{font-size:18px}.tag{font-size:9px}main{grid-template-columns:1fr;gap:18px;padding-top:22px}h1{font-size:32px;margin:7px 0 10px}.intro{font-size:13px;margin:0}.rules,.note{display:none}.play{max-width:580px}.number{font-size:clamp(32px,9vw,58px)}.observe-panel{min-height:230px}.question-panel{padding:15px 18px;min-height:105px}.question-panel h2{font-size:23px}footer{margin-top:22px}}
+@media(max-width:500px){.shell{padding:12px 16px}header{padding-bottom:10px}.logo{width:34px;height:36px}.brand{gap:8px}.tag{font-size:8px;max-width:150px}main{padding-top:16px;gap:15px}h1{font-size:28px}.eyebrow{font-size:10px}.intro{font-size:12px;line-height:1.6}.statusbar{margin-bottom:10px}.question-panel{min-height:100px;padding:13px 16px;margin-bottom:10px}.question-panel h2{font-size:22px}.question-help{font-size:11px}.answer-box{min-height:58px;padding:11px;margin-bottom:10px}.key{min-height:48px;font-size:22px}.keypad{gap:7px}.answer-actions{margin-top:10px;gap:7px}.primary{min-height:46px;padding:12px}.bottom{margin-top:8px}.number{letter-spacing:.035em}.observe-panel{padding:28px 10px}}
+</style></head><body><div class="shell">
+<header><div class="brand"><div class="logo" aria-hidden="true">8</div><div><strong>otto cifre</strong><div class="tag">Un numero, tre prospettive</div></div></div><a class="back" href="https://lorenzorocco.me/hobbies/">← Hobbies &amp; Fun</a></header>
+<main><aside><div class="eyebrow">Memoria · Numeri · Attenzione</div><h1>Otto cifre.<br>Tre sfide.</h1><p class="intro">Memorizza il numero. Premi «Prosegui» per nasconderlo, poi rispondi alle tre domande usando il tastierino.</p><ol class="rules"><li><strong>1 · Al contrario</strong>Riscrivi tutte le cifre dalla fine all’inizio.</li><li><strong>2 · Le cifre pari</strong>Scrivile nell’ordine in cui compaiono, da sinistra a destra.</li><li><strong>3 · Le cifre dispari</strong>Scrivile partendo dalla fine, da destra a sinistra.</li></ol><p class="note">Lo zero è pari. Mantieni le cifre ripetute. Se non ci sono cifre del tipo richiesto, premi «Nessuna cifra».</p></aside>
+<section class="play" aria-label="Area di gioco"><div class="statusbar"><span class="phase" id="phase">1 · Osserva</span><span class="time" id="time" aria-label="Tempo">00:00.00</span></div>
+<div id="observe"><div class="observe-panel"><p class="label">Il numero da ricordare</p><p class="number" id="number"></p><p class="observe-help">Prenditi il tempo che ti serve. Il numero scompare solo quando premi «Prosegui».</p></div><button type="button" class="primary" id="proceed">Prosegui →</button></div>
+<div id="answer" hidden><div class="question-panel"><p class="question-step" id="question-step"></p><h2 id="question-title"></h2><p class="question-help" id="question-help"></p></div><div class="answer-box" aria-label="La tua risposta"><output class="answer-value" id="answer-value" aria-live="polite"></output></div><div class="keypad" id="keypad" role="group" aria-label="Tastierino numerico"></div><div class="answer-actions"><button class="primary" type="button" id="confirm">Conferma →</button><button class="none" type="button" id="none" hidden>Nessuna cifra</button></div></div>
+<div id="review" class="review" hidden><h2 id="review-title"></h2><p id="review-number" class="digits"></p><ol id="review-list"></ol><div class="review-actions"><button type="button" class="primary" id="play-again">Gioca ancora ↻</button></div></div>
+<div class="bottom"><p class="hint" id="hint">Il tempo comprende anche la memorizzazione.</p><button class="restart" type="button" id="restart">Nuovo numero</button></div></section></main>
+<footer><span>Ricorda il numero. Cambia prospettiva.</span><span>Esercizio ricreativo · Classifica condivisa</span></footer></div><script>'use strict';
+globalThis.Digits=(()=>{
+ function generate(){return String(10000000+Math.floor(Math.random()*90000000));}
+ function answers(number){const digits=[...number];return [digits.slice().reverse().join(''),digits.filter(d=>Number(d)%2===0).join(''),digits.slice().reverse().filter(d=>Number(d)%2===1).join('')];}
+ class Session{
+  constructor(number=generate()){if(!/^[1-9][0-9]{7}$/.test(number))throw Error('Expected an eight-digit number');this.number=number;this.phase='observe';this.question=0;this.input='';this.responses=[];}
+  proceed(){if(this.phase!=='observe')return false;this.phase='answer';return true;}
+  digit(value){if(this.phase==='answer'&&typeof value==='string'&&/^[0-9]$/.test(value)&&this.input.length<8)this.input+=value;}
+  backspace(){if(this.phase==='answer')this.input=this.input.slice(0,-1);}
+  clear(){if(this.phase==='answer')this.input='';}
+  submit(){if(this.phase!=='answer'||!this.input.length||(this.question===0&&this.input.length!==8))return 'ignored';return this.record(this.input);}
+  submitEmpty(){if(this.phase!=='answer'||this.question===0||this.input.length)return 'ignored';return this.record('');}
+  record(value){this.responses.push(value);this.input='';if(this.question<2){this.question++;return 'next';}this.phase=this.correctCount===3?'won':'lost';return this.phase;}
+  get correctCount(){const expected=answers(this.number);return this.responses.filter((answer,i)=>answer===expected[i]).length;}
+ }
+ return {generate,answers,Session};
+})();
+</script><script>'use strict';
+globalThis.I18n=(()=>{
+ const en={
+  'otto cifre':'eight digits','Otto cifre':'Eight Digits','Otto cifre — memoria e numeri':'Eight Digits — memory and numbers',
+  'Un numero, tre prospettive':'One number, three perspectives','Memoria · Numeri · Attenzione':'Memory · Numbers · Attention','Otto cifre.':'Eight digits.','Tre sfide.':'Three challenges.',
+  'Memorizza il numero. Premi «Prosegui» per nasconderlo, poi rispondi alle tre domande usando il tastierino.':'Memorize the number. Press “Continue” to hide it, then answer the three questions using the keypad.',
+  '1 · Al contrario':'1 · In reverse','Riscrivi tutte le cifre dalla fine all’inizio.':'Write every digit from last to first.',
+  '2 · Le cifre pari':'2 · Even digits','Scrivile nell’ordine in cui compaiono, da sinistra a destra.':'Write them in the order they appear, from left to right.',
+  '3 · Le cifre dispari':'3 · Odd digits','Scrivile partendo dalla fine, da destra a sinistra.':'Write them from the end, from right to left.',
+  'Lo zero è pari. Mantieni le cifre ripetute. Se non ci sono cifre del tipo richiesto, premi «Nessuna cifra».':'Zero is even. Keep repeated digits. If there are no digits of the requested type, press “No digits”.',
+  'Il numero da ricordare':'The number to remember','Prenditi il tempo che ti serve. Il numero scompare solo quando premi «Prosegui».':'Take all the time you need. The number disappears only when you press “Continue”.',
+  'La tua risposta':'Your answer','Tastierino numerico':'Numeric keypad','Conferma →':'Confirm →','Nessuna cifra':'No digits',
+  'Risultati e classifica':'Results and leaderboard','Il tempo comprende anche la memorizzazione.':'The time includes memorization.','Nuovo numero':'New number',
+  'Ricorda il numero. Cambia prospettiva.':'Remember the number. Change perspective.','Scrivi il numero al contrario.':'Write the number in reverse.',
+  'Dall’ultima cifra alla prima: tutte e otto.':'From the last digit to the first: all eight.',
+  'Scrivi le cifre pari dall’inizio.':'Write the even digits from the start.','Da sinistra a destra. Lo zero è pari; mantieni le ripetizioni.':'From left to right. Zero is even; keep repeated digits.',
+  'Scrivi le cifre dispari dalla fine.':'Write the odd digits from the end.','Da destra a sinistra. Mantieni le ripetizioni.':'From right to left. Keep repeated digits.',
+  'Tocca le cifre':'Tap the digits','Cancella tutto':'Clear all','Cancella ultima cifra':'Delete last digit','Domanda {number} di 3':'Question {number} of 3',
+  'Tre risposte, una sola sequenza.':'Three answers, one sequence.','L’esito sarà mostrato dopo tutte e tre le risposte.':'Your results will appear after all three answers.',
+  'Risposte corrette: {count} su 3':'Correct answers: {count} out of 3','Il numero era {number}':'The number was {number}',
+  'La tua risposta: {answer}':'Your answer: {answer}','Risposta corretta: {answer}':'Correct answer: {answer}','Rivedi le risposte':'Review answers',
+  'Hai vinto!':'You won!','Mi spiace! Ritenta':'Sorry! Try again','Il tuo tempo: {time}':'Your time: {time}',
+  'I 10 migliori tempi':'Top 10 times','Posizione':'Rank','Giocatore':'Player','Caricamento classifica…':'Loading leaderboard…',
+  'Classifica momentaneamente non disponibile.':'The leaderboard is temporarily unavailable.','Nome salvato.':'Name saved.',
+  'Il tuo tempo è al posto {rank}!':'Your time ranks #{rank}!','Manche completata! Il tuo tempo non entra nei primi 10.':'Round complete! Your time is outside the top 10.',
+  'Riprova: puoi migliorare il tuo tempo.':'Try again: you can improve your time.','La classifica è ancora vuota.':'There are no times on the leaderboard yet.',
+  'Anonimo':'Anonymous','Vuoi aggiungere un nome? È facoltativo.':'Would you like to add a name? It is optional.',
+  'Salva nome':'Save name','Il tuo nome':'Your name',
+  'Il tempo viene salvato automaticamente. Il nome scelto sarà visibile nella classifica pubblica.':'Your time is saved automatically. Your chosen name will appear on the public leaderboard.',
+  'Riprova a caricare':'Retry loading','Prossima manche':'Next round','Ritenta':'Try again',
+  'passo mentale':'mental steps','Passo mentale':'Mental Steps','dieci diamanti':'ten diamonds','Dieci diamanti':'Ten Diamonds','otto mesi':'eight months','Otto mesi':'Eight Months',
+  'Dieci diamanti — memoria visiva':'Ten Diamonds — visual memory','Otto mesi — memoria e sequenza':'Eight Months — memory and sequence',
+  'Un percorso, tutto nella mente':'A journey in your mind','Disponibile offline':'Available offline','Memoria · Attenzione · Spazio':'Memory · Attention · Space',
+  'Segui le frecce.':'Follow the arrows.','Trova l’arrivo.':'Find the finish.',
+  'Parti dalla bandierina, percorri ogni freccia con la mente e tocca solo la casella finale.':'Start at the flag, follow each arrow in your mind and tap only the final square.',
+  'Tipo di frecce':'Arrow type','Semplici · 1 passo':'Simple · 1 step','A gomito · fino a 2 passi':'Elbows · up to 2 steps','Composte · fino a 3 passi':'Compound · up to 3 steps',
+  'Frecce per percorso':'Arrows per route','8 frecce per ogni percorso':'8 arrows per route','8 frecce':'8 arrows','Inizia a giocare':'Start playing','Inizia a giocare →':'Start playing →',
+  'Il timer parte con la prima sequenza. Nessuna fretta: prima la precisione.':'The timer starts with the first route. Take your time: accuracy comes first.',
+  'Come si leggono le frecce?':'How do I read the arrows?',
+  'Leggi le otto frecce da sinistra a destra, sulla stessa riga. Ogni tratto vale una casella. Il puntino indica l’inizio del simbolo, la punta la fine.':'Read the eight arrows from left to right. Each segment moves one square. The dot marks the start of a symbol and the arrowhead marks its end.',
+  'Le direzioni restano quelle dello schermo: alto, basso, destra e sinistra. Ogni simbolo riparte dalla posizione raggiunta dal precedente.':'Directions always follow the screen: up, down, right and left. Each symbol starts where the previous one ended.',
+  'Se sbagli, riparti mentalmente dalla bandierina: il percorso rimane identico. Quando indovini, appare una nuova sequenza.':'If you make a mistake, start again mentally from the flag: the route stays the same. A correct answer brings a new route.',
+  'Area di gioco':'Game area','Tempo':'Time','Risolti':'Solved','Errori':'Errors','Pausa':'Pause','Riprendi':'Resume',
+  'Griglia di 8 righe e 8 colonne':'Grid with 8 rows and 8 columns','Pronto a partire?':'Ready to start?',
+  'Scegli la difficoltà e premi «Inizia a giocare».':'Choose a difficulty and press “Start playing”.','Il tuo percorso':'Your route','Le frecce restano visibili':'The arrows stay visible','Il primo percorso ti aspetta.':'Your first route is waiting.',
+  'Tutti i movimenti restano dentro la griglia.':'Every move stays inside the grid.','Un passo alla volta. Anche quando il percorso si complica.':'One step at a time, even when the route gets tricky.',
+  'Esercizio ricreativo · Classifica condivisa':'Recreational exercise · Shared leaderboard',
+  'su':'up','destra':'right','giù':'down','sinistra':'left','passo':'step','passi':'steps',
+  'Riga {row}, colonna {column}':'Row {row}, column {column}',', partenza':', start',
+  '{count} passi in totale':'{count} steps in total','Parti dalla bandierina e tocca la casella d’arrivo.':'Start at the flag and tap the final square.',
+  'Ricomincia da zero ↻':'Start over ↻','Le impostazioni si applicano quando ricominci. Il timer esclude le pause.':'Settings apply when you start over. The timer excludes pauses.',
+  'Esatto! Ecco un nuovo percorso.':'Correct! Here is a new route.','Riprova: riparti dalla bandierina con le stesse frecce.':'Try again: start from the flag with the same arrows.',
+  'Stesso percorso: riparti dalla bandierina e riprova.':'Same route: start from the flag and try again.','Una piccola pausa.':'Take a short break.',
+  'Il tempo è fermo. Premi «Riprendi» quando vuoi continuare.':'The timer is stopped. Press “Resume” when you are ready.',
+  'Osserva. Ricorda. Ritrova.':'Look. Remember. Find.','← Hobbies & Fun':'← Hobbies & Fun','Memoria visiva · Spazio':'Visual memory · Space',
+  'Dieci diamanti.':'Ten diamonds.','Dove sono?':'Where are they?',
+  'Memorizza la posizione dei diamanti. Quando sei pronto, premi «Prosegui»: scompariranno e dovrai ritrovarli toccando le celle.':'Memorize the diamond positions. When you are ready, press “Continue”: they will disappear and you must find them by tapping the squares.',
+  'Osserva con calma':'Take a good look','I 10 diamanti restano visibili finché vuoi. Ogni riga ne contiene da 1 a 3.':'The 10 diamonds stay visible as long as you need. Each row contains 1 to 3.',
+  'Premi Prosegui':'Press Continue','La griglia si svuota. Ora usa la memoria.':'The grid clears. Now use your memory.','Ritrovali tutti':'Find them all',
+  'Tocca le 10 celle giuste, nell’ordine che preferisci.':'Tap the 10 correct squares in any order.',
+  'Da 1 a 3 diamanti per riga, 10 in totale. La prima cella sbagliata termina la partita.':'1 to 3 diamonds per row, 10 in total. The first wrong square ends the game.',
+  '1 · Osserva':'1 · Observe','2 · Ricorda':'2 · Recall','/ 10 ritrovati':'/ 10 found','/ 8 mesi':'/ 8 months',
+  'Griglia di 5 righe e 5 colonne':'Grid with 5 rows and 5 columns','Osserva i 10 diamanti. Prenditi il tempo che ti serve.':'Look at the 10 diamonds. Take all the time you need.',
+  'Prosegui →':'Continue →','Nuova disposizione':'New layout','Nessun limite di tempo. Il primo errore conclude la partita.':'No time limit. The first mistake ends the game.',
+  'Una piccola sfida per la memoria visiva.':'A little challenge for your visual memory.',', diamante ritrovato':', diamond found',', errore':', wrong',', diamante':', diamond',
+  'Gioca ancora ↻':'Play again ↻','Ricomincia':'Start over','Bene! Continua: il primo errore conclude la partita.':'Good! Keep going: the first mistake ends the game.',
+  'Dove sono i diamanti? Tocca soltanto le celle che ricordi.':'Where are the diamonds? Tap only the squares you remember.','Partita terminata':'Game over',
+  'Questa cella era vuota. Hai ritrovato {count} diamanti su 10.':'This square was empty. You found {count} out of 10 diamonds.',
+  'Tutti ritrovati!':'All found!','Perfetto: hai ritrovato tutti e 10 i diamanti senza errori!':'Perfect: you found all 10 diamonds without a mistake!',
+  'In verde i diamanti ritrovati, in oro quelli che mancavano.':'Green marks the diamonds you found; gold shows the ones you missed.',
+  'Otto posizioni, una sequenza':'Eight positions, one sequence','Memoria visiva · Sequenza':'Visual memory · Sequence','Da gennaio':'From January','ad agosto.':'to August.',
+  'Memorizza dove si trova ogni mese. Quando sei pronto, premi «Prosegui»: i rettangoli si oscurano. Tocca le posizioni nell’ordine dei mesi.':'Memorize where each month is. When you are ready, press “Continue”: the rectangles will darken. Tap their positions in month order.',
+  'Osserva la disposizione':'Study the layout','Otto mesi e otto colori, distribuiti su tre righe.':'Eight months and eight colours, arranged in three rows.',
+  'Nomi e colori scompaiono. Le posizioni rimangono le stesse.':'Names and colours disappear. The positions stay the same.',
+  'Segui il calendario':'Follow the calendar','Gennaio, febbraio, marzo… fino ad agosto.':'January, February, March… all the way to August.',
+  'Il primo errore termina la partita. Ritrova tutti e otto i mesi nell’ordine giusto per vincere.':'The first mistake ends the game. Find all eight months in the right order to win.',
+  'Otto rettangoli su tre righe: tre, tre e due':'Eight rectangles in three rows: three, three and two',
+  'Osserva dove si trova ogni mese. Prenditi il tempo che ti serve.':'Study where each month is. Take all the time you need.',
+  'Ricorda le posizioni. Ritrova la sequenza.':'Remember the positions. Find the sequence.',
+  'Gennaio':'January','Febbraio':'February','Marzo':'March','Aprile':'April','Maggio':'May','Giugno':'June','Luglio':'July','Agosto':'August',
+  'Rettangolo {number}':'Rectangle {number}',', ritrovato':', found','Tocca {month}.':'Tap {month}.',
+  'Cercavi {month}. Hai ritrovato {count} mesi su 8 nell’ordine giusto.':'You were looking for {month}. You found {count} out of 8 months in the right order.',
+  'Sequenza completata!':'Sequence complete!','Perfetto: da gennaio ad agosto, senza errori!':'Perfect: January to August, without a mistake!',
+  'Il bordo rosso indica l’errore. Ora puoi rivedere la disposizione.':'The red border marks the mistake. You can now review the layout.'
+ };
+ const storageKey='mind-games-language';let language='it';const listeners=new Set();
+ try{const saved=localStorage.getItem(storageKey);if(saved==='en'||saved==='it')language=saved;}catch{}
+ function t(key,values={}){const text=language==='en'&&Object.hasOwn(en,key)?en[key]:key;return text.replace(/\{(\w+)\}/g,(match,name)=>Object.hasOwn(values,name)?String(values[name]):match);}
+ let textNodes=[],attributes=[],selector=null;
+ function apply(){
+  if(typeof document==='undefined')return;
+  document.documentElement.lang=language;
+  for(const [node,original] of textNodes)if(node.isConnected){const key=original.trim();node.nodeValue=original.replace(key,t(key));}
+  for(const [node,name,original] of attributes)if(node.isConnected)node.setAttribute(name,t(original));
+  if(selector)selector.value=language;
+ }
+ function setLanguage(value,persist=true){
+  if((value!=='it'&&value!=='en')||value===language)return;
+  language=value;if(persist)try{localStorage.setItem(storageKey,value);}catch{}
+  apply();for(const listener of listeners)listener();
+ }
+ const api={t,setLanguage,has:key=>Object.hasOwn(en,key),subscribe:callback=>{listeners.add(callback);return ()=>listeners.delete(callback);},get language(){return language;}};
+ if(typeof document!=='undefined'){
+  const walker=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT,{acceptNode:node=>node.nodeValue.trim()&&!node.parentElement.closest('script,style')?NodeFilter.FILTER_ACCEPT:NodeFilter.FILTER_REJECT});
+  while(walker.nextNode())textNodes.push([walker.currentNode,walker.currentNode.nodeValue]);
+  const title=document.querySelector('title');if(title)textNodes.push([title.firstChild,title.textContent]);
+  for(const node of document.querySelectorAll('[aria-label]'))attributes.push([node,'aria-label',node.getAttribute('aria-label')]);
+  const meta=document.querySelector('meta[name="apple-mobile-web-app-title"]');if(meta)attributes.push([meta,'content',meta.content]);
+  const header=document.querySelector('header'),tools=document.createElement('div');tools.className='header-tools';
+  const control=document.createElement('label');control.className='language-control';
+  selector=document.createElement('select');selector.id='language';selector.setAttribute('aria-label','Lingua / Language');
+  for(const [value,label] of [['it','Italiano'],['en','English']]){const option=document.createElement('option');option.value=value;option.textContent=label;selector.append(option);}
+  selector.addEventListener('change',()=>setLanguage(selector.value));control.append(selector);tools.append(control);
+  for(const node of [...header.children].slice(1))tools.append(node);header.append(tools);
+  const style=document.createElement('style');style.textContent='.header-tools{display:flex;align-items:center;justify-content:flex-end;gap:14px;min-width:0}.language-control select{font:inherit;font-size:13px;color:#315c4b;background:#fffef9;border:1px solid #c5d9cc;border-radius:9px;padding:8px 11px;min-height:36px;max-width:125px}.language-control select:focus-visible{outline:3px solid #c48639;outline-offset:3px}@media(max-width:600px){.header-tools{flex-direction:column;align-items:flex-end;gap:6px}.header-tools .offline{display:none}.language-control select{font-size:12px;padding:6px 8px}.header-tools .back{font-size:10px}}';document.head.append(style);
+  apply();
+  window.addEventListener('storage',event=>{if(event.key===storageKey)setLanguage(event.newValue,false);});
+ }
+ return api;
+})();
+
+globalThis.LEADERBOARD_API_URL="https://rocco-game-scores.lorenzo-rocco.workers.dev";
+'use strict';
+globalThis.RoundResults=(()=>{
+ class Clock{
+  constructor(now=()=>performance.now()){this.now=now;this.total=0;this.since=null;this.ended=false;}
+  start(){this.total=0;this.since=this.now();this.ended=false;}
+  elapsed(){return this.total+(this.since===null?0:this.now()-this.since);}
+  pause(){if(this.since!==null){this.total=this.elapsed();this.since=null;}}
+  resume(){if(!this.ended&&this.since===null)this.since=this.now();}
+  finish(){this.pause();this.ended=true;return this.total;}
+ }
+ function formatTime(ms){const cs=Math.floor(ms/10);return String(Math.floor(cs/6000)).padStart(2,'0')+':'+String(Math.floor(cs/100)%60).padStart(2,'0')+'.'+String(cs%100).padStart(2,'0');}
+ if(typeof document==='undefined')return {Clock,formatTime};
+ const t=(key,values)=>I18n.t(key,values);
+ const base=(globalThis.LEADERBOARD_API_URL||((location.hostname==='127.0.0.1'||location.hostname==='localhost')?location.origin+'/api':'')).replace(/\/$/,'');
+ const dialog=document.createElement('dialog');dialog.id='round-result';dialog.className='result-dialog';dialog.setAttribute('aria-labelledby','result-title');
+ dialog.innerHTML='<div class="result-header"><span id="result-symbol" aria-hidden="true"></span><h2 id="result-title"></h2><p id="result-time"></p></div><p id="result-status" role="status" aria-live="polite"></p><h3 id="result-ranking-title"></h3><div class="result-table-wrap"><table class="result-table"><thead><tr><th id="result-rank-label" scope="col"></th><th id="result-name-label" scope="col"></th><th id="result-duration-label" scope="col"></th></tr></thead><tbody id="result-rows"></tbody></table></div><form id="result-name-form" hidden><label for="result-name" id="result-name-label-input"></label><div class="result-name-controls"><input id="result-name" maxlength="24" autocomplete="off"><button id="result-save" type="submit"></button></div><p id="result-privacy"></p></form><div class="result-actions"><button id="result-reload" type="button" hidden></button><button id="result-next" type="button"></button></div>';
+ document.body.append(dialog);
+ const css=document.createElement('style');css.textContent='.result-dialog{box-sizing:border-box;max-width:540px;width:calc(100% - 28px);max-height:calc(100dvh - 28px);border:1px solid #cdddcf;border-radius:22px;padding:25px;background:#fffdf6;color:#294438;font:inherit;overflow:auto;box-shadow:0 18px 80px #18372c35}.result-dialog::backdrop{background:#243c348c}.result-header{text-align:center}.result-header>span{display:inline-grid;place-items:center;width:52px;height:52px;border-radius:50%;background:#e2f1df;font-size:29px;color:#337e58}.result-header h2{font:400 32px Georgia,serif;letter-spacing:-.7px;margin:12px 0 8px}.result-header p{font-size:20px;font-variant-numeric:tabular-nums;margin:0 0 16px}.result-dialog h3{font-size:14px;font-weight:600;margin:20px 0 10px}.result-dialog #result-status{font-size:13px;line-height:1.6;text-align:center;min-height:22px}.result-table{border-collapse:collapse;width:100%;font-size:13px}.result-table th{text-align:left;font-size:11px;font-weight:500;color:#6d8069;padding:7px 8px}.result-table td{padding:8px;border-top:1px solid #e3e9dc}.result-table th:last-child,.result-table td:last-child{text-align:right;font-variant-numeric:tabular-nums}.result-table tr.highlight{background:#e0f1dd}.result-table td:nth-child(2){overflow-wrap:anywhere}.result-name-controls{display:flex;gap:9px;margin-top:8px}.result-name-controls input{font:inherit;width:100%;min-width:0;border:1px solid #cbdccc;border-radius:9px;padding:10px;color:#294438;background:white}.result-dialog button{font:inherit;cursor:pointer;border:0;border-radius:9px;padding:12px 16px;min-height:44px;background:#28796b;color:white}.result-dialog button:disabled{opacity:.55;cursor:default}.result-dialog label{font-size:13px;display:block;margin-top:20px}.result-dialog form p{font-size:11px;line-height:1.6;color:#75826e}.result-actions{display:flex;gap:10px;margin-top:20px}.result-actions #result-next{flex:1}.result-actions #result-reload{background:#e5eee0;color:#315c4b}.result-dialog [hidden]{display:none!important}.result-dialog button:focus-visible,.result-dialog input:focus-visible{outline:3px solid #ba9546;outline-offset:3px}@media(max-width:500px){.result-dialog{padding:20px 16px}.result-header h2{font-size:28px}.result-table td{padding:7px 6px}}';document.head.append(css);
+ const $=id=>dialog.querySelector('#'+id);let current=null;
+ const summary=document.createElement('p');summary.id='result-summary';summary.style.fontSize='14px';summary.hidden=true;$('result-time').after(summary);
+ async function request(path,body){
+  if(!base)throw Error('not_configured');const controller=new AbortController(),timeout=setTimeout(()=>controller.abort(),10000);
+  try{const res=await fetch(base+path,{method:body?'POST':'GET',headers:body?{'Content-Type':'application/json'}:{},...(body?{body:JSON.stringify(body)}:{}),signal:controller.signal,cache:'no-store'});if(!res.ok)throw Error('request_failed');return await res.json();}finally{clearTimeout(timeout);}
+ }
+ function render(){
+  if(!current)return;const c=current;
+  $('result-symbol').textContent=c.won?'✓':'↻';$('result-title').textContent=t(c.won?'Hai vinto!':'Mi spiace! Ritenta');$('result-time').textContent=t('Il tuo tempo: {time}',{time:formatTime(c.duration_ms)});
+  summary.hidden=!c.summary;summary.textContent=c.summary?c.summary():'';
+  $('result-ranking-title').textContent=t('I 10 migliori tempi')+(c.game==='passo-mentale'?' · '+t({'1':'Semplici · 1 passo','2':'A gomito · fino a 2 passi','3':'Composte · fino a 3 passi'}[c.variant]):'');
+  $('result-rank-label').textContent=t('Posizione');$('result-name-label').textContent=t('Giocatore');$('result-duration-label').textContent=t('Tempo');
+  const status=c.loading?'Caricamento classifica…':c.error?'Classifica momentaneamente non disponibile.':c.savedName?'Nome salvato.':c.rank?'Il tuo tempo è al posto {rank}!':c.won?'Manche completata! Il tuo tempo non entra nei primi 10.':'Riprova: puoi migliorare il tuo tempo.';
+  $('result-status').textContent=t(status,{rank:c.rank});$('result-rows').replaceChildren();
+  if(!c.loading&&!c.error&&!c.entries.length){const row=document.createElement('tr'),cell=document.createElement('td');cell.colSpan=3;cell.textContent=t('La classifica è ancora vuota.');row.append(cell);$('result-rows').append(row);}
+  c.entries.forEach((entry,i)=>{const row=document.createElement('tr');if(c.rank===i+1)row.className='highlight';for(const value of [i+1,entry.name||t('Anonimo'),formatTime(entry.duration_ms)]){const cell=document.createElement('td');cell.textContent=value;row.append(cell);}$('result-rows').append(row);});
+  $('result-name-form').hidden=!c.won||!c.rank||!!c.error||c.loading;
+  $('result-name-label-input').textContent=t('Vuoi aggiungere un nome? È facoltativo.');$('result-save').textContent=t('Salva nome');$('result-save').disabled=c.loading;$('result-name').setAttribute('aria-label',t('Il tuo nome'));$('result-privacy').textContent=t('Il tempo viene salvato automaticamente. Il nome scelto sarà visibile nella classifica pubblica.');
+  $('result-reload').hidden=!c.error;$('result-reload').textContent=t('Riprova a caricare');$('result-next').textContent=t(c.nextLabel||(c.won?'Prossima manche':'Ritenta'));
+ }
+ async function load(name){
+  const c=current;if(!c||c.loading)return;c.loading=true;c.error=false;render();
+  try{const data=c.won?await request('/scores',{id:c.id,game:c.game,variant:c.variant,duration_ms:c.duration_ms,name:name===undefined?c.name:name}):await request('/leaderboard?'+new URLSearchParams({game:c.game,variant:c.variant}));
+   if(current!==c)return;c.entries=data.entries;c.rank=data.rank||null;if(name!==undefined){c.name=name;c.savedName=!!c.rank;}
+  }catch{if(current===c)c.error=true;}finally{if(current===c){c.loading=false;render();}}
+ }
+ function close(){if(!current)return;const next=current.onNext;current=null;dialog.close();if(next)next();}
+ $('result-next').addEventListener('click',close);dialog.addEventListener('cancel',event=>{event.preventDefault();close();});$('result-reload').addEventListener('click',()=>load());
+ $('result-name-form').addEventListener('submit',event=>{event.preventDefault();load($('result-name').value.trim());});
+ I18n.subscribe(render);
+ function show({game,variant='standard',won,durationMs,onNext,summary=null,nextLabel=null}){
+  if(dialog.open)dialog.close();current={id:crypto.randomUUID(),game,variant:String(variant),won,duration_ms:Math.max(1,Math.round(durationMs)),onNext,summary,nextLabel,name:'',entries:[],rank:null,loading:false,error:false,savedName:false};$('result-name').value='';render();dialog.showModal();$('result-next').focus({preventScroll:true});void load();
+ }
+ return {Clock,formatTime,show};
+})();
+
+'use strict';
+(()=>{
+ const $=id=>document.getElementById(id),t=(key,values)=>I18n.t(key,values);
+ const prompts=[['Scrivi il numero al contrario.','Dall’ultima cifra alla prima: tutte e otto.'],['Scrivi le cifre pari dall’inizio.','Da sinistra a destra. Lo zero è pari; mantieni le ripetizioni.'],['Scrivi le cifre dispari dalla fine.','Da destra a sinistra. Mantieni le ripetizioni.']];
+ let game,duration=0,transitionUntil=0;const clock=new RoundResults.Clock();
+ for(const value of ['1','2','3','4','5','6','7','8','9','clear','0','backspace']){const button=document.createElement('button');button.type='button';button.className='key'+(/^\d$/.test(value)?'':' utility');button.dataset.key=value;button.addEventListener('click',()=>edit(value));$('keypad').append(button);}
+ function edit(value){if(game.phase!=='answer')return;if(value==='clear')game.clear();else if(value==='backspace')game.backspace();else game.digit(value);renderInput();}
+ function renderInput(){
+  $('answer-value').textContent=game.input||t('Tocca le cifre');$('answer-value').className='answer-value'+(game.input?'':' answer-empty');
+  $('confirm').disabled=game.question===0?game.input.length!==8:!game.input.length;$('none').disabled=!!game.input.length;
+  for(const button of $('keypad').children){const key=button.dataset.key;button.textContent=key==='clear'?t('Cancella tutto'):key==='backspace'?'⌫':key;button.setAttribute('aria-label',key==='backspace'?t('Cancella ultima cifra'):key==='clear'?t('Cancella tutto'):key);button.disabled=(key==='clear'||key==='backspace')&&!game.input.length;}
+ }
+ function render(){
+  const observe=game.phase==='observe',finished=['won','lost'].includes(game.phase);
+  $('observe').hidden=!observe;$('answer').hidden=observe||finished;$('review').hidden=!finished;
+  $('number').textContent=observe?game.number:'';$('number').setAttribute('aria-label',observe?[...game.number].join(' '):'');
+  $('phase').textContent=t(observe?'1 · Osserva':finished?'Partita terminata':'Domanda {number} di 3',{number:game.question+1});
+  $('question-step').textContent=t('Domanda {number} di 3',{number:game.question+1});$('question-title').textContent=t(prompts[game.question][0]);$('question-help').textContent=t(prompts[game.question][1]);$('none').hidden=game.question===0;renderInput();
+  $('hint').textContent=t(observe?'Il tempo comprende anche la memorizzazione.':finished?'Tre risposte, una sola sequenza.':'L’esito sarà mostrato dopo tutte e tre le risposte.');
+  $('restart').hidden=finished;
+  if(finished){$('review-title').textContent=t('Risposte corrette: {count} su 3',{count:game.correctCount});$('review-number').textContent=t('Il numero era {number}',{number:game.number});$('review-list').replaceChildren();const expected=Digits.answers(game.number);game.responses.forEach((value,i)=>{const li=document.createElement('li'),label=document.createElement('strong'),answer=document.createElement('div'),correct=document.createElement('div');label.textContent=(value===expected[i]?'✓ ':'× ')+t(prompts[i][0]);answer.textContent=t('La tua risposta: {answer}',{answer:value||t('Nessuna cifra')});correct.textContent=t('Risposta corretta: {answer}',{answer:expected[i]||t('Nessuna cifra')});answer.className=correct.className='digits';li.append(label,answer,correct);$('review-list').append(li);});}
+ }
+ function showResults(){RoundResults.show({game:'otto-cifre',won:game.phase==='won',durationMs:duration,summary:()=>t('Risposte corrette: {count} su 3',{count:game.correctCount}),onNext:()=>{render();$('play-again').focus({preventScroll:true});},nextLabel:'Rivedi le risposte'});}
+ function submit(empty=false){
+  if(performance.now()<transitionUntil)return;const result=empty?game.submitEmpty():game.submit();if(result==='ignored')return;transitionUntil=performance.now()+300;render();
+  if(result==='won'||result==='lost'){duration=clock.finish();$('time').textContent=RoundResults.formatTime(duration);showResults();}
+ }
+ function restart(){game=new Digits.Session();clock.start();transitionUntil=0;render();$('time').textContent='00:00.00';}
+ $('proceed').addEventListener('click',()=>{if(game.proceed()){render();$('keypad').querySelector('button').focus({preventScroll:true});}});
+ $('confirm').addEventListener('click',()=>submit());$('none').addEventListener('click',()=>submit(true));$('restart').addEventListener('click',restart);$('play-again').addEventListener('click',restart);
+ document.addEventListener('keydown',event=>{if(game.phase!=='answer'||document.querySelector('dialog[open]')||event.target.closest('select,input,textarea'))return;if(/^[0-9]$/.test(event.key)){event.preventDefault();edit(event.key);}else if(event.key==='Backspace'){event.preventDefault();edit('backspace');}else if(event.key==='Enter'&&event.target===document.body){event.preventDefault();submit();}});
+ setInterval(()=>{if(game.phase==='observe'||game.phase==='answer')$('time').textContent=RoundResults.formatTime(clock.elapsed());},100);
+ I18n.subscribe(render);restart();
+})();
+</script></body></html>
